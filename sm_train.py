@@ -33,7 +33,7 @@ estimator = PyTorch(entry_point='mnist.py',
                         'backend': 'gloo'
                     })
 
-estimator.fit({'training': inputs})
+estimator.fit()
 
 ########################################################################
 # DONOT EDIT AFTER THIS LINE
