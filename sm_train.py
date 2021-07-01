@@ -5,7 +5,7 @@ from sagemaker.analytics import TrainingJobAnalytics
 from report import ResultReport
 
 sagemaker_session = sagemaker.Session(boto3.session.Session())
-
+ 
 # Put the right role and input data
 role = "arn:aws:iam::445772965351:role/fngo-sagemaker-execution-role"
 inputs = "s3://sagemaker-dev-aicel/mnist/"
