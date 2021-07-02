@@ -8,7 +8,7 @@ sagemaker_session = sagemaker.Session(boto3.session.Session())
  
 # Put the right role and input data
 role = "arn:aws:iam::445772965351:role/fngo-sagemaker-execution-role"
-inputs = "s3://sagemaker-dev-aicel/mnist/"
+inputs = "s3://sagemaker-dev-aicel/MNIST/"
 print("hello")
 # Make sure the metric_definition and its regex
 # Train_epoch=1.0000;  Train_loss=0.8504;
