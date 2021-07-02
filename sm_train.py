@@ -5,11 +5,11 @@ from sagemaker.analytics import TrainingJobAnalytics
 from report import ResultReport
 
 sagemaker_session = sagemaker.Session(boto3.session.Session())
-
+ 
 # Put the right role and input data
 role = "arn:aws:iam::445772965351:role/fngo-sagemaker-execution-role"
-inputs = "s3://sagemaker-dev-aicel/mnist/"
-
+inputs = "s3://sagemaker-dev-aicel/MNIST"
+print("hello")
 # Make sure the metric_definition and its regex
 # Train_epoch=1.0000;  Train_loss=0.8504;
 # Test_loss=0.3227;  Test_accuracy=0.9100;
@@ -26,6 +26,7 @@ estimator = PyTorch(entry_point='mnist.py',
                     role=role,
                     framework_version='1.4.0',
                     train_instance_count=2,
+                    py_version="py3",
                     train_instance_type='ml.c4.xlarge',
                     metric_definitions=metric_definitions,
                     hyperparameters={
