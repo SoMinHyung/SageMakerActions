@@ -4,12 +4,11 @@ name: SageMaker Train
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on:
-  pull_request:
-    branches: [ master ]
+on: [issue_comment]
 
 jobs:
   sm_train:
+    if: github.event.issue.pull_request != null &&  contains(github.event.comment.body, '/train'
     runs-on: ubuntu-latest
     steps:
     - name: PR checkout
