@@ -6,6 +6,7 @@ import base64
 from io import BytesIO, StringIO
 from sagemaker.analytics import TrainingJobAnalytics
 
+print("comment")
 class Comment:
     repo = None
     pr = None
