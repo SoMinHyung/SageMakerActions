@@ -72,7 +72,7 @@ class Comment:
 
 if __name__ == '__main__':
     comment = Comment()
-
+    print("comment main")
     comment.update_comment("hi there", "new hi there")
     comment.add_comment("hi there")
     values = comment.get_comment('model_data=')
